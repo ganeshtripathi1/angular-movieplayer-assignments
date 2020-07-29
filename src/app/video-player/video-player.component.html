@@ -1,0 +1,19 @@
+<div class="header">
+  <a href="#default" class="logo">Video Player App</a>
+</div>
+<br />
+<iframe
+  width="1200"
+  height="500"
+  [src]="video"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+  webkitallowfullscreen
+  mozallowfullscreen
+  class="framedesign"
+></iframe>
+<h2>Playing:-{{ name }}</h2>
+<button class="auto" (click)="autostart()">{{ text }}</button>
+<h1>Select the video from playlist</h1>
+
+<app-playlist></app-playlist>

@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Playlist</title>
+  </head>
+
+  <body>
+    <button class="btn" (click)="hide()">{{ list_btn_text }}</button
+    ><br /><br /><br />
+
+    <span style="color: blue;">click on thumbnail to play video.....</span>
+    <div *ngFor="let data of Playlist_Data; let i = index" (click)="setRow(i)">
+      <div
+        class="card"
+        (click)="video_selected(data.trailer, data.name)"
+        [ngClass]="{ highlight: selectedIndex === i }"
+        [hidden]="list_status"
+      >
+        <img src="{{ data.poster }}" style="height: 150px;" />
+        <div class="container">
+          <h4>
+            <b>{{ data.name | customepipe }}</b>
+          </h4>
+          <span>{{ data.year }}</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
