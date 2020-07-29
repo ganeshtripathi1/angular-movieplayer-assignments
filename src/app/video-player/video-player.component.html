@@ -2,6 +2,17 @@
   <a href="#default" class="logo">Video Player App</a>
 </div>
 <br />
+<span *ngIf="hide"
+  >please note some time this api
+  <b>https://valuefy-assignment-x.herokuapp.com/api/getVideos </b>take time to
+  load please refresh application if video not loaded after some time and see
+  application in laptop and desktop<span
+    (click)="hidemsg()"
+    style="cursor: pointer;"
+  >
+    <u>click here hide this messgae</u></span
+  ></span
+>
 <iframe
   width="1200"
   height="500"

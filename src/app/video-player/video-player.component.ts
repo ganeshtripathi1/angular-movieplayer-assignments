@@ -12,6 +12,7 @@ export class VideoPlayerComponent implements OnInit {
   name: any;
   autoplaystatus: boolean = false;
   text: string = 'Start Autoplay Mode';
+  hide: boolean = true;
 
   constructor(
     private api: ApiserviceService,
@@ -43,5 +44,9 @@ export class VideoPlayerComponent implements OnInit {
       this.autoplaystatus = true;
       this.text = 'Off Autoplay Mode';
     }
+  }
+
+  hidemsg() {
+    this.hide = false;
   }
 }
